@@ -11,7 +11,7 @@ public class ProductList
 
     public ProductList(List<Product> list)
     {
-        this.list = new ArrayList<>(list); // copy so it stays mutable
+        this.list = new ArrayList<>(list);
     }
 
     public void add(Product product)
@@ -26,7 +26,7 @@ public class ProductList
 
     public int getLength()
     {
-        return list.size(); // simpler than list.toArray().length
+        return list.size();
     }
 
     @Override

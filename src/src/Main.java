@@ -84,7 +84,7 @@ public class Main
                     if (id < 1 || id > list.getLength())
                     {
                         System.out.println("Invalid id; Try again!");
-                        continue; // ask again instead of exiting the whole method
+                        continue;
                     }
                     cart.addProduct(list.getProduct(id - 1));
                     System.out.println("Added to cart!");
