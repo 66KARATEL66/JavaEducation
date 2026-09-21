@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.IntStream;
 
+/** A mutable collection of products selected by a customer. */
 public class Cart {
     private final List<Product> products = new ArrayList<>();
 
