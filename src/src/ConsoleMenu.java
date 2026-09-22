@@ -51,12 +51,13 @@ public class ConsoleMenu {
     }
 
     private void deleteProductFromCart() {
-        int productId = readInt("Enter product ID to delete (0 to stop): ");
-        if (productId != 0 && !cart.removeProductById(productId)) {
+        int productId = readInt("Enter index to delete (0 to stop): ");
+        if (productId != 0 && !cart.removeProductByIndex(productId)) {
             System.out.println("Product was not found in the cart.");
         }
     }
 
+/*
     private void updateProduct() {
         int productId = readInt("Enter product ID to update (0 to stop): ");
         if (productId == 0) {
@@ -65,7 +66,9 @@ public class ConsoleMenu {
         catalogue.findById(productId).ifPresentOrElse(this::readProductUpdate,
                 () -> System.out.println("Product was not found."));
     }
+*/
 
+/*
     private void readProductUpdate(Product product) {
         product.name = readText("Enter name: ");
         product.price = readPrice("Enter price: ");
@@ -73,6 +76,7 @@ public class ConsoleMenu {
         product.category = readCategory();
         System.out.println("Product updated.");
     }
+*/
 
     private void search() {
         String query = readText("Enter product name or category: ");

@@ -10,12 +10,13 @@ public class Cart {
         products.add(Objects.requireNonNull(product, "product must not be null"));
     }
 
-    public boolean removeProductById(int productId) {
-        return products.stream()
-                .filter(product -> product.getId() == productId)
-                .findFirst()
-                .map(products::remove)
-                .orElse(false);
+    public boolean removeProductByIndex(int index) {
+        if (index < 0 || index >= products.size()) {
+            return false;
+        }
+
+        products.remove(index);
+        return true;
     }
 
     public boolean isEmpty() {
